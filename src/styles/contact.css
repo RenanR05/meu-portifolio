@@ -1,0 +1,29 @@
+.contact-input {
+    width: 100%;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi);
+    padding: 1rem;
+    border-radius: .5rem;
+    border: 1px solid var(--second-color);
+    outline: none;
+    margin-bottom: var(--mb4);
+}
+
+.contact-button {
+    display: block;
+    border: none;
+    outline: none;
+    font-size: var(--normal-font-size);
+    cursor: pointer;
+    margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .contact-form {
+        width: 460px;
+    }
+
+    .contact-container {
+        justify-items: center;
+    }
+}

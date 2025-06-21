@@ -1,0 +1,27 @@
+.footer {
+    background-color: #02000f;
+    color: #ffffff;
+    text-align: center;
+    font-weight: var(--font-semi);
+    padding: 2rem 0;
+}
+
+.footer-title {
+    font-size: 2rem;
+    margin-bottom: var(--mb4);
+}
+
+.footer-social {
+    margin-bottom: var(--mb4);
+}
+
+.footer-icon {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 0 var(--mb2);
+    transition: .3s;
+}
+
+.footer-icon:hover {
+    color: var(--first-color);
+}

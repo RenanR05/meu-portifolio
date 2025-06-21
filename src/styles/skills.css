@@ -1,0 +1,106 @@
+/* skills.css - Efeito 3D com Nomes Ocultos */
+.skills__container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 3rem 0;
+  perspective: 1000px;
+}
+
+.skill__item {
+  width: 180px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 2px solid var(--first-color);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform-style: preserve-3d;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Garante que o nome não vaze */
+}
+
+.skill__item:hover {
+  transform: translateY(-10px) scale(1.05) rotateX(5deg);
+  box-shadow: 0 15px 30px rgba(64, 112, 244, 0.4), 
+              0 0 0 2px var(--first-color);
+  background: rgba(64, 112, 244, 0.1);
+}
+
+.skill__icon {
+  font-size: 4rem;
+  color: var(--second-color);
+  transition: all 0.4s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.skill__item:hover .skill__icon {
+  transform: scale(1.1) translateZ(20px);
+  filter: drop-shadow(0 4px 8px rgba(64, 112, 244, 0.6));
+}
+
+.skill__name {
+  font-family: var(--body-font);
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: -50px; /* Começa escondido */
+  opacity: 0;
+  transition: all 0.4s ease;
+  background: rgba(64, 112, 244, 0.7);
+  width: 100%;
+  text-align: center;
+  padding: 0.8rem 0;
+  transform: translateZ(10px);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.skill__item:hover .skill__name {
+  bottom: 0;
+  opacity: 1;
+}
+
+/* Efeito de profundidade */
+.skill__item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent 0%, var(--first-color) 150%);
+  opacity: 0;
+  border-radius: 14px;
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.skill__item:hover::before {
+  opacity: 0.2;
+  transform: translateZ(-10px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .skill__item {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills__container {
+    gap: 1rem;
+  }
+  .skill__item {
+    width: 140px;
+    height: 140px;
+  }
+}
