@@ -7,6 +7,7 @@ import Skills from "./components/Skills";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 import { initScrollReveal } from './utils/scrollReveal';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
       <Work />
       <Contact />
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 }

@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
         </a>
       </div>
 
-      <p>&#169; 2024 Copyright all rights reserved</p>
+      <p>&#169; 2025 Copyright all rights reserved</p>
     </footer>
   );
 };

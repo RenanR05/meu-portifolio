@@ -1,4 +1,3 @@
-/* skills.css - Efeito 3D com Nomes Ocultos */
 .skills__container {
   display: flex;
   justify-content: center;
@@ -22,7 +21,7 @@
   transform-style: preserve-3d;
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden; /* Garante que o nome não vaze */
+  overflow: hidden; 
 }
 
 .skill__item:hover {
@@ -51,7 +50,7 @@
   color: white;
   text-transform: uppercase;
   position: absolute;
-  bottom: -50px; /* Começa escondido */
+  bottom: -50px; 
   opacity: 0;
   transition: all 0.4s ease;
   background: rgba(64, 112, 244, 0.7);
@@ -67,7 +66,7 @@
   opacity: 1;
 }
 
-/* Efeito de profundidade */
+
 .skill__item::before {
   content: '';
   position: absolute;
@@ -87,7 +86,6 @@
   transform: translateZ(-10px);
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .skill__item {
     width: 160px;
