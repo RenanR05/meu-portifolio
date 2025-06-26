@@ -17,7 +17,7 @@ const Contact: React.FC = () => {
     const { success } = await sendEmail(
       formRef.current,
       'service_hl5hx58',
-      'template_d2pweh',
+      'template_d2pwehl',
       'ZoeEo4DYXdtEqJmTd'
     );
 
