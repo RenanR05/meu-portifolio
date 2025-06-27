@@ -13,7 +13,6 @@ export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
       setCount((prev) => {
         if (prev >= 100) {
           clearInterval(intervalRef.current!);
-          // Animação de saída
           gsap.to(textRef.current, {
             opacity: 0,
             y: -20,

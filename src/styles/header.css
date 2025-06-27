@@ -59,7 +59,6 @@
     background-color: var(--first-color);
 }
 
-/* Mobile */
 @media screen and (max-width: 768px) {
     .nav-menu {
         position: fixed;
@@ -81,7 +80,6 @@
     }
 }
 
-/* Desktop */
 @media screen and (min-width: 769px) {
     .nav {
         height: calc(var(--header-height) + 1rem);
