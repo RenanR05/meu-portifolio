@@ -17,7 +17,6 @@ export const initScrollReveal = () => {
   sr.reveal('.about-subtitle', { delay: 200 });
   sr.reveal('.about-text', { delay: 400 });
 
-  // ✅ Aqui, as novas classes
   sr.reveal('.section-title', { delay: 100 });
   sr.reveal('.skills__container', { delay: 200 });
   sr.reveal('.skill__item', { interval: 150 });

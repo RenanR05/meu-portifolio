@@ -3,7 +3,8 @@
   justify-content: center;
   gap: 1.5rem;
   flex-wrap: wrap;
-  margin: 3rem 0;
+  margin: 3rem auto;
+  max-width: 996px;
   perspective: 1000px;
 }
 
