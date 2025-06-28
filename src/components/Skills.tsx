@@ -1,16 +1,17 @@
 
 const Skills = () => {
   const skills = [
-    { icon: 'bx bxl-c-plus-plus', name: 'C++' },
-    { icon: 'bx bxl-javascript', name: 'JS' },
-    { icon: 'bx bxl-html5', name: 'HTML' },
-    { icon: 'bx bxl-nodejs', name: 'Node' },
     { icon: 'bx bxl-react', name: 'React' },
+    { icon: 'bx bxl-javascript', name: 'JS' },
+    { icon: 'bx bxl-nodejs', name: 'Node' },
     { icon: 'bx bxl-aws', name: 'AWS' },
-    { icon: 'bx bxl-mongodb', name: 'MONGODB' },
+    { icon: 'bx bxl-html5', name: 'HTML' },
     { icon: 'bx bxl-git', name: 'GIT' },
+    { icon: 'bx bxl-mongodb', name: 'MONGODB' },
+    { icon: 'bx bxl-c-plus-plus', name: 'C++' },
     { icon: 'bx bxl-postgresql', name: 'POSTGRESQL' },
     { icon: 'bx bxl-java', name: 'Java' },
+    { icon: 'bx bxl-php', name: 'PHP' },
   ];
 
   return (

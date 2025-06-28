@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import LoadingScreen from "./components/LoadingScreen";
+import { useEffect } from "react";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -11,17 +10,9 @@ import ScrollToTopButton from "./components/ScrollToTopButton";
 import { initScrollReveal } from './utils/scrollReveal';
 
 function App() {
-  const [loading, setLoading] = useState(true);
-
   useEffect(() => {
-    if (!loading) {
-      initScrollReveal();
-    }
-  }, [loading]);
-
-  if (loading) {
-    return <LoadingScreen onFinish={() => setLoading(false)} />;
-  }
+    initScrollReveal();
+  }, []);
 
   return (
     <div>
