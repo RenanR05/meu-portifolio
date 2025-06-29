@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from './LanguageSelector';
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -11,6 +13,7 @@ const navLinks = [
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState("#home");
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +35,6 @@ const Header: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
   return (
     <header className="l-header">
       <nav className="nav bd-grid">
@@ -49,10 +51,13 @@ const Header: React.FC = () => {
                   className={`nav-link${active === link.href ? " active" : ""}`}
                   onClick={() => setMenuOpen(false)}
                 >
-                  {link.label}
+                  {t(link.label)}
                 </a>
               </li>
             ))}
+            <li className="nav-item lang-selector-item">
+              <LanguageSelector />
+            </li>
           </ul>
         </div>
 

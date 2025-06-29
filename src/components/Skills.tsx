@@ -1,5 +1,9 @@
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-const Skills = () => {
+const Skills: React.FC = () => {
+  const { t } = useTranslation();
+
   const skills = [
     { icon: 'bx bxl-react', name: 'React' },
     { icon: 'bx bxl-javascript', name: 'JS' },
@@ -16,8 +20,8 @@ const Skills = () => {
 
   return (
     <section className="section" id="skills">
-      <h2 className="section-title">Skills</h2>
-      
+      <h2 className="section-title">{t('Skills')}</h2>
+
       <div className="skills__container">
         {skills.map((skill, index) => (
           <div key={index} className="skill__item">

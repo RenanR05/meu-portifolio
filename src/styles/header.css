@@ -59,6 +59,18 @@
     background-color: var(--first-color);
 }
 
+.lang-selector-item {
+  margin-left: 2rem;
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.nav-list .lang-selector-item:last-child {
+  margin-right: 0;
+}
+
 @media screen and (max-width: 768px) {
     .nav-menu {
         position: fixed;

@@ -1,7 +1,9 @@
 import React, { useRef, useState } from 'react';
 import { sendEmail } from '../utils/sendEmail';
+import { useTranslation } from 'react-i18next';
 
 const Contact: React.FC = () => {
+  const { t } = useTranslation();
   const formRef = useRef<HTMLFormElement>(null);
   const [statusMessage, setStatusMessage] = useState('');
   const [statusType, setStatusType] = useState<'success' | 'error' | ''>('');
@@ -22,11 +24,11 @@ const Contact: React.FC = () => {
     );
 
     if (success) {
-      setStatusMessage('Mensagem enviada com sucesso!');
+      setStatusMessage(t('ContactSuccess'));
       setStatusType('success');
       formRef.current.reset();
     } else {
-      setStatusMessage('Erro ao enviar a mensagem. Tente novamente.');
+      setStatusMessage(t('ContactError'));
       setStatusType('error');
     }
 
@@ -40,7 +42,7 @@ const Contact: React.FC = () => {
 
   return (
     <section className="contact section" id="contact">
-      <h2 className="section-title">Contact</h2>
+      <h2 className="section-title">{t('Contact')}</h2>
 
       {statusMessage && (
         <div className={`form-status ${statusType}`}>{statusMessage}</div>
@@ -51,20 +53,20 @@ const Contact: React.FC = () => {
           <input
             type="text"
             name="name"
-            placeholder="Name"
+            placeholder={t('ContactName')}
             className="contact-input"
             required
           />
           <input
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder={t('ContactEmail')}
             className="contact-input"
             required
           />
           <textarea
             name="message"
-            placeholder="Message"
+            placeholder={t('ContactMessage')}
             cols={0}
             rows={10}
             className="contact-input"
@@ -73,7 +75,7 @@ const Contact: React.FC = () => {
 
           <input
             type="submit"
-            value={isSending ? 'Sending...' : 'Send'}
+            value={isSending ? t('ContactSending') : t('ContactSend')}
             className="contact-button button"
             disabled={isSending}
           />

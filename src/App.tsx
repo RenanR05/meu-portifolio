@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import { initScrollReveal } from './utils/scrollReveal';
+import './utils/i18n';
 
 function App() {
   useEffect(() => {

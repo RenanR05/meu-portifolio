@@ -14,8 +14,10 @@
     "@emailjs/browser": "^4.4.1",
     "antd": "^5.26.1",
     "gsap": "^3.13.0",
+    "i18next": "^25.2.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-i18next": "^15.5.3",
     "react-simple-typewriter": "^5.0.1",
     "scrollreveal": "^4.0.9",
     "styled-components": "^6.1.19"
